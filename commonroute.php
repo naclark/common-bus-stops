@@ -9,7 +9,6 @@
  * @license http://opensource.org/licenses/osl-3.0.php Open Software License ("OSL") v. 3.0
  * @see Route_inc.php
  * @see Stop_inc.php 
- * @todo Center map on one of the stops.
  * @todo Add route direction data.
  * @todo Figure out that include_once dealie.
  */
@@ -83,8 +82,8 @@ function showMap()
         
         
         $(document).ready(function() {
-        //Center map on Seattle.
-        var latlng = new google.maps.LatLng(47.605976, -122.334511);
+        //Center map on first stop.
+        var latlng = new google.maps.LatLng('$stops[0]->Lat', '$stops[0]->Lon');
     
         var map = new google.maps.Map(document.getElementById("mapDiv"), { zoom: 13, center: latlng, mapTypeId: google.maps.MapTypeId.ROADMAP });
 
