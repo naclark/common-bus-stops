@@ -83,9 +83,9 @@ function showMap()
         
         $(document).ready(function() {
         //Center map on first stop.
-        var latlng = new google.maps.LatLng('$stops[0]->Lat', '$stops[0]->Lon');
+        var latlng = new google.maps.LatLng(' . $stops[0]->Lat . ', ' . $stops[0]->Lon . ');
     
-        var map = new google.maps.Map(document.getElementById("mapDiv"), { zoom: 13, center: latlng, mapTypeId: google.maps.MapTypeId.ROADMAP });
+        var map = new google.maps.Map(document.getElementById("mapDiv"), { zoom: 14, center: latlng, mapTypeId: google.maps.MapTypeId.ROADMAP });
 
         // Markers from the stops
         ';
